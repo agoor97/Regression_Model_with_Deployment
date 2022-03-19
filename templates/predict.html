@@ -1,0 +1,61 @@
+{% extends 'basic.html' %}
+
+{% block head %}
+<title> Predict </title>
+{% endblock %}
+
+{% block body %}
+<br>
+<h4> Predict new Instances </h4>
+<hr>
+<!-- Create a Form for posting new post -->
+<form action="/predict" method="POST">
+    <div>
+        <div style="display: inline">
+            <a href="https://www.FaceBook.com/AIEagles">
+                <img alt="AI_Eagles Image" src="{{url_for('static', filename='predict_img.png')}}"
+                    class="Responsive image float-right" width="342" height="244">
+            </a>
+        </div>
+        <div class="form-row" style="display: inline">
+            <div class="form-group col-md-6">
+                <label for="iri0">IRI0(in/mile):</label>
+                <input class="form-control" type="iri0" name="iri0" id="iri0" placeholder="Enter IRI0(in/mile)"
+                    aria-label="Enter IRI0(in/mile)">
+                <small id="iri0help" class="form-text text-muted">this Field is required.</small>
+                <br>
+                <label for="age">AGE:</label>
+                <input class="form-control" type="age" name="age" id="age" placeholder="Enter AGE"
+                    aria-label="Enter AGE">
+                <small id="agehelp" class="form-text text-muted">this Field is required.</small>
+                <br>
+                <label for="fc">FC%:</label>
+                <input class="form-control" type="fc" name="fc" id="fc" placeholder="Enter FC%" aria-label="Enter FC%">
+                <small id="fchelp" class="form-text text-muted">this Field is required.</small>
+                <br>
+                <label for="lc">LC(ft/mile):</label>
+                <input class="form-control" type="lc" name="lc" id="lc" placeholder="Enter LC(ft/mile)"
+                    aria-label="Enter LC(ft/mile)">
+                <small id="lchelp" class="form-text text-muted">this Field is required.</small>
+                <br>
+                <label for="tc">TC(ft/mile):</label>
+                <input class="form-control" type="tc" name="tc" id="tc" placeholder="Enter TC(ft/mile)"
+                    aria-label="Enter TC(ft/mile)">
+                <small id="tchelp" class="form-text text-muted">this Field is required.</small>
+                <br>
+                <label for="rut">RUT(in):</label>
+                <input class="form-control" type="rut" name="rut" id="rut" placeholder="Enter RUT(in)"
+                    aria-label="Enter RUT(in)">
+                <small id="ruthelp" class="form-text text-muted">this Field is required.</small>
+                <br>
+                <input class="btn btn-success btn-lg btn-block" type="submit" value="Predict">
+                <hr>
+                <h5> IRIF(in/mile) prediction is : {{ pred_value }}</h5>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+{% endblock %}

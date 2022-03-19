@@ -1,0 +1,81 @@
+{% extends 'basic.html' %}
+
+{% block head %}
+<title> About Us </title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+{% endblock %}
+
+{% block body %}
+<br>
+<h2> About Us </h2>
+
+<br>
+<div>
+
+    <a href="https://www.FaceBook.com/AIEagles">
+        <img alt="AI_Eagles Image" src="{{url_for('static', filename='simple_logo.png')}}"
+            class="Responsive image float-right" width="300" height="300">
+    </a>
+
+    <div class="bg-light p-4 rounded">
+        <div class="col-sm-15 mx-auto">
+            <h4>AI Eagles</h4>
+            <hr style="width:75%;text-align:left;margin-left:0">
+            <ul>
+                <li>
+                    <h5 style="font-family: Helvetica">
+                        AI Eagles is a startup for building intelligent solutions using Artificial Intelligence, Machine
+                        Learning, and Deep Learning for Applications in Data Analysis, Data Science, Computer Vision,
+                        and NLP
+                        🥇🥇🥇
+                    </h5>
+                </li>
+                <hr style="width:75%;text-align:left;margin-left:0">
+                <li>
+                    <h5 style="font-family: Helvetica">
+                        AI Eagles offers many services, in general we transform your work into intelligent solutions
+                        starting from Data Analysis/Science up to building complex Models for Computer Vision and NLP.
+                    </h5>
+                </li>
+                <hr style="width:75%;text-align:left;margin-left:0">
+                <li>
+                    <h5 style="font-family: Helvetica">
+                        AI Eagles also offers an AI professional Diploma for students or companies starting from scratch
+                        up to be a Machine Learning Engineer or Data Analystor Data Scientist.
+                    </h5>
+                </li>             
+            </ul>
+            <hr style="width:77%;text-align:left;margin-left:0">
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<footer class="bd-footer p-3 p-md-5 mt-5 bg-light text-center text-sm-left">
+    <div class="container">
+        <i class="bi bi-facebook"></i>
+        <a href="http://www.FaceBook.com/AIEagles" title="faceagoor"><i style="margin-right: 0.5em; color: #EEEEEE;"
+                class="icon-home icon-4x"></i>FaceBook</a>
+        &emsp; &emsp;
+        <i class="bi bi-github"></i>
+        <a href="http://www.github.com/agoor97" title="gitagoor"><i style="margin-right: 0.5em; color: #EEEEEE;"
+                class="icon-home icon-4x"></i>GitHub</a>
+        &emsp; &emsp;
+        <i class="bi bi-linkedin"></i>
+        <a href="https://www.linkedin.com/in/mlagoor/" title="linkedagoor"><i
+                style="margin-right: 0.5em; color: #EEEEEE;" class="icon-home icon-4x"></i>Linked In</a>
+        &emsp; &emsp;
+        <i class="bi bi-youtube"></i>
+        <a href="http://www.youtube.com/MohammedAgoor" title="tubeagoor"><i style="margin-right: 0.5em; color: #EEEEEE;"
+                class="icon-home icon-4x"></i>Youtube</a>
+        <span class="text-muted float-right">&copy; 2022  AIEagles, Inc</span>
+        &emsp; &emsp; &emsp; &emsp;
+        <i class="bi bi-info-circle-fill"></i>
+        <a href="/about_us" title="about"><i style="margin-right: 0.5em; color: #EEEEEE;"
+                class="icon-home icon-4x"></i>About Us</a>
+    </div>
+</footer>
+
+{% endblock %}

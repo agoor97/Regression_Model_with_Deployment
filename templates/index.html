@@ -1,0 +1,88 @@
+{% extends 'basic.html' %}
+
+{% block head %}
+<title> Home </title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+{% endblock %}
+
+{% block body %}
+<br>
+<h2> Home </h2>
+
+<br>
+<div>
+    <div class="bg-light p-4 rounded">
+        <div class="col-sm-12 mx-auto">
+            <h4>Regression Model for predicting DELTA</h4>
+            <a href="https://www.FaceBook.com/AIEagles">
+                <img alt="AI_Eagles Image" src="{{url_for('static', filename='simple_logo.png')}}"
+                    class="Responsive image float-right" width="180" height="180">
+            </a>
+            <hr>
+            <h5> Problem Definition </h5>
+            <ul>
+                <li>The Dataset consists of 7 Columns.</li>
+                <li>The target is IRIF(in/mile).</li>
+                <li>Features are (IRI0(in/mile), AGE, FC%, LC(ft/mile), TC(ft/mile), RUT(in)).</li>
+                <li>
+                    The Distribution of (IRI0 & RIF(in/mile)) Columns is exponential Distribution, taking
+                    the natural log(value) to optimize the Distribution to be Normal, and after Model predicts
+                    take (exponential(value)) to reverse.
+                </li>
+                <li>
+                    The Distribution of (AGE & RUT(in)) Columns is also exponential Distribution, using box-cox
+                    tramsformation
+                    to optimize the Distribution to be Normal Distribution is better to help the Model learn and train
+                    correctly.
+                </li>
+                <li>
+                    Training KNN & RF as our Baseline Models
+                </li>
+                <li>
+                    The best Algorithm is (GBRT) an algorithm based on Ensemble Learning
+                    <a
+                        href="https://towardsdatascience.com/machine-learning-part-18-boosting-algorithms-gradient-boosting-in-python-ef5ae6965be4">Understand GBRT</a>
+                </li>
+                <li>
+                    The Algorithm results are -- r2_score = 85.2 % , MAE = 3.57, MSE = 59.35 -- on validation Dataset.
+                </li>
+            </ul>
+            <hr>
+            <br>
+            <p>
+                <a class="btn btn-success" href="/predict" role="button">Predict one Instance &raquo;</a>
+                <a class="btn btn-primary float-right" href="/predict_batch" role="button">Predict batch of Instances
+                    &raquo;</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<footer class="bd-footer p-3 p-md-5 mt-5 bg-light text-center text-sm-left">
+    <div class="container">
+        <i class="bi bi-facebook"></i>
+        <a href="http://www.FaceBook.com/AIEagles" title="faceagoor"><i style="margin-right: 0.5em; color: #EEEEEE;"
+                class="icon-home icon-4x"></i>FaceBook</a>
+        &emsp; &emsp;
+        <i class="bi bi-github"></i>
+        <a href="http://www.github.com/agoor97" title="gitagoor"><i style="margin-right: 0.5em; color: #EEEEEE;"
+                class="icon-home icon-4x"></i>GitHub</a>
+        &emsp; &emsp;
+        <i class="bi bi-linkedin"></i>
+        <a href="https://www.linkedin.com/in/mlagoor/" title="linkedagoor"><i
+                style="margin-right: 0.5em; color: #EEEEEE;" class="icon-home icon-4x"></i>Linked In</a>
+        &emsp; &emsp;
+        <i class="bi bi-youtube"></i>
+        <a href="http://www.youtube.com/MohammedAgoor" title="tubeagoor"><i style="margin-right: 0.5em; color: #EEEEEE;"
+                class="icon-home icon-4x"></i>Youtube</a>
+        <span class="text-muted float-right">&copy; 2022 AIEagles, Inc</span>
+        &emsp; &emsp; &emsp; &emsp;
+        <i class="bi bi-info-circle-fill"></i>
+        <a href="/about_us" title="about"><i style="margin-right: 0.5em; color: #EEEEEE;"
+                class="icon-home icon-4x"></i>About Us</a>
+    </div>
+</footer>
+
+
+{% endblock %}
