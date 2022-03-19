@@ -9,7 +9,6 @@ from utils import process_one, process_batch   ## the function I craeted to proc
 
 ## Intialize the Flask APP
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER1'] = 'static'
 
 ## Loading the Model
 model = joblib.load('xgboost_model.pkl')
