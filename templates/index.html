@@ -13,7 +13,7 @@
 <div>
     <div class="bg-light p-4 rounded">
         <div class="col-sm-12 mx-auto">
-            <h4>Regression Model for predicting DELTA</h4>
+            <h4>Regression Model for predicting IRIF(in/mile)</h4>
             <a href="https://www.FaceBook.com/AIEagles">
                 <img alt="AI_Eagles Image" src="{{url_for('static', filename='simple_logo.png')}}"
                     class="Responsive image float-right" width="180" height="180">
@@ -25,7 +25,7 @@
                 <li>The target is IRIF(in/mile).</li>
                 <li>Features are (IRI0(in/mile), AGE, FC%, LC(ft/mile), TC(ft/mile), RUT(in)).</li>
                 <li>
-                    The Distribution of (IRI0 & RIF(in/mile)) Columns is exponential Distribution, taking
+                    The Distribution of (IRI0 & IRIF(in/mile)) Columns is exponential Distribution, taking
                     the natural log(value) to optimize the Distribution to be Normal, and after Model predicts
                     take (exponential(value)) to reverse.
                 </li>
